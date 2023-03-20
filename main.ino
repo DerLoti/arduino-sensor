@@ -1,7 +1,7 @@
 #include <LiquidCrystal.h>
 
-int trigPin = 13;    // Trigger
-int echoPin = 10;    // Echo
+int trigPin = 13;  // Trigger
+int echoPin = 10;  // Echo
 
 int redLed = A2;
 int yellowLed = A1;
@@ -26,7 +26,7 @@ void loop() {
   //digitalWrite(redLed, HIGH);
   //digitalWrite(greenLed, HIGH);
   //digitalWrite(yellowLed, HIGH);
-  
+
   digitalWrite(trigPin, LOW);
   delayMicroseconds(5);
   digitalWrite(trigPin, HIGH);
@@ -35,12 +35,11 @@ void loop() {
   pinMode(echoPin, INPUT);
   duration = pulseIn(echoPin, HIGH);
 
-  cm = (duration/2) / 29.1;     // Divide by 29.1 or multiply by 0.0343
+  cm = (duration / 2) / 29.1;  // Divide by 29.1 or multiply by 0.0343
   lcd.noDisplay();
   delay(500);
   lcd.display();
   lcd.print(cm);
   lcd.print("cm");
   sounds();
-  
 }
