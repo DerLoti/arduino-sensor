@@ -3,9 +3,9 @@
 int trigPin = 13;  // Trigger
 int echoPin = 10;  // Echo
 
-int redLed = A2;
-int yellowLed = A1;
-int greenLed = A0;
+int redLed  = 16;
+int yellowLed = 15;
+int greenLed = 14;
 long duration, cm, inches;
 
 const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
